@@ -31,7 +31,7 @@ module.exports.getConfig = () => {
   const currentPath = process.cwd();
 
   const defaults = {
-    lang: 'js',
+    lang: 'ts',
     dir: 'src/components',
   };
 
@@ -126,7 +126,7 @@ module.exports.logItemCompletion = (successText) => {
 
 module.exports.logConclusion = () => {
   console.info('\n');
-  console.info(chalk.bold.rgb(...colors.green)('Component created!'));
+  console.info(chalk.bold.rgb(...colors.green)('Component created! new!!'));
   console.info(chalk.rgb(...colors.mediumGray)(sample(AFFIRMATIONS)));
   console.info('\n');
 };
