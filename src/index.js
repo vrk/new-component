@@ -70,10 +70,10 @@ export { default } from './${componentName}';
 `);
 
 // Added css template
-const cssTemplate = prettify(`\
-container {
+const cssTemplate = `
+.container {
 }
-`);
+`;
 
 logIntro({
   name: componentName,
@@ -127,7 +127,7 @@ mkDirPromise(componentDir)
   )
   .then((template) =>
     // Let's add the CSS as well
-    writeFilePromise(cssPath, prettify(cssTemplate))
+    writeFilePromise(cssPath, cssTemplate)
   )
   .then((template) => {
     logItemCompletion('Index file built and saved to disk.');
